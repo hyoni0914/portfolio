@@ -1,50 +1,273 @@
+.pro-grid > div{
+    position: relative;
+
+}
+
+.pro-grid > div > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28vw;
+    height: 31.8vh;
+    text-align: center;
+    background-color: black;
+    opacity: 0;
+    color: white;
+}
+
+.pro-grid > div > div:hover{
+    opacity: 0.7;
+    transition: 0.7s;    
+}
+
+
+.pro-grid > div > div >span{
+    border: 1px solid white;
+    padding: 5px;
+    font-size: 1.5em;   
+}
+
+.pro-grid > div > div > p{
+    margin-top: 5vw;
+    font-size: 1.2em;
+}
+
+
 .pro-grid{
     display: grid;
-    grid-template-columns: repeat(3,23vw);
-    grid-template-rows: 17vw 17vw;
-    gap: 10px;
+    grid-template-columns: repeat(3,28vw);
+    grid-template-rows: 18vw 19vw;
+    gap: 14px;
+    width: 100%;
+    height: 75vh;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+}
+
+.pro-grid img{
+    width: 26vw;
+    height: 24vh;
+    margin-left: 0.4vw;
+    margin-top: 1vw;
 }
 
 .pro-grid div{
     padding: 10px;
+    width: 28vw;
+    height: 31.8vh;
     font-size: 0.6em;
     background-color:white;
     color: black;
+    box-shadow: 0 7px 10px rgba(111, 111, 111, 0.19), 0 6px 10px rgba(67, 67, 67, 0.23);    /* border: 1px solid red; */
 }
 
-.pro-grid div:hover{
-    transform: scale(1.03);
-    transition: 0.3s;
-}
-
-.pro-section{
-    display: flex;
-    flex-direction: column;
-}
-
-.pro-section > div:first-child{
-    align-self: self-start;
-    margin-left: 20px;
-}
-
-.pro-section h1{
-    font-size: 1.2em;
-    /* text-shadow: 2px 2px 1px  whitesmoke ; */
-
-}
+/* 모달창 내용*/
 
 .modal-wrap{
     display: flex;
-    gap: 10px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px; /*size test*/
+    margin: auto;/*size test*/
 }
 
 .modal-wrap > div:first-child{
-    width: 35vw;
-    border: 1px solid red;
+    width: 40%;
+    height: 90%;
+    /* border: 1px solid blue; */
 }
 
 .modal-wrap > div:last-child{
-    width: 65vw;
-    border: 1px solid red;
+    width: 60%;
+    height: 90%;
+    margin-left: 10px;
+    margin-top: 5vw;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.detail{
+    margin-top: 10px;
+}
+.detail h6{
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+.detail img{
+    margin: 0px;
+    width: 4vw;
+    height:2.5vh;
+    margin-right: 2px;
+}
+
+.detail h6:first-child{
+    font-size: 1em;
+}
+
+.project-sien {
+    margin-top: 10px;
+}
+
+.project-sien span{
+    letter-spacing: 1px;
+    margin-left: 4px;
+}
+
+.project-sien span:hover{
+    border-bottom: 1px solid darkblue;
+    color: darkblue;
+}
+
+
+.videoTag{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border: 1px solid lightgray;
+    margin-top: 10px;
+}
+
+.slider{
+    width: 100%;
+    background-color: rgb(210, 210, 210);
+    height: auto;
+    margin-top: 10px;
+}
+
+.sliderimg img{
+    width: 98%;
+    margin: auto;
+    height: auto;
+    margin-top: 6px;
+  }
+
+
+.image-grid p{
+    display: inline-block;
+    font-weight: 500;
+}
+
+.intro-title{
+    margin-left: 3px;
+}
+
+.intro-x{
+    text-align: right;
+    margin: 0px;
+}
+
+.intro-x i{
+    cursor: pointer;
+    padding: 2px;
+    margin: 0px;
+}
+
+.intro-x i:hover{
+    font-weight: bold;
+}
+
+.intro-flex{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    padding: 2px;
+    height: 100%;
+    font-family: "Noto Sans JP", serif;
+}
+
+.intro-flex > .first{
+    height: 34vw;
+    font-size: 0.9em;
+}
+
+.intro-flex > .second{
+    height: 35vw;
+}
+
+.intro-flex > .link-div{
+    margin-top: 1vw;
+}
+
+.link-div a,
+.url-null{
+    border-bottom: 1px solid;
+    color: darkblue;
+    border: none;
+}
+
+.link-div a:hover
+.url-null:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+
+
+@media (max-width: 768px) {
+    .pro-grid {
+        grid-template-columns: repeat(1, 45vw);
+        grid-template-rows: auto;
+        overflow: auto;
+        gap: 5px;
+    }
+
+    .pro-grid >  div,
+    .pro-grid >div > div{
+        width: 45vw;
+        height: 29vh;
+
+    }
+
+    .pro-grid img {
+        width: 41vw;
+        height: 19vh;
+    }
+
+    .modal-wrap {
+        flex-direction: column;
+    }
+
+    .modal-wrap > div:first-child, 
+    .modal-wrap > div:last-child {
+        width: 90vw;
+    }
+
+    .videoTag {
+        width: 90vw;
+        height: auto;
+    }
+
+    .sliderimg img {
+        width: 90vw;
+    }
+    .intro-flex {
+        width: 50vw;
+        letter-spacing: 1px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-wrap {
+        flex-direction: column;
+    }
+
+    .modal-wrap > div:first-child, 
+    .modal-wrap > div:last-child {
+        width: 90vw;
+    }
+
+
 
 }
+
+
+
+
